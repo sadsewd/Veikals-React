@@ -1,0 +1,31 @@
+.containerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border: solid white 1px;
+  text-align: center;
+}
+
+th {
+  border: solid white 1px;
+  padding: 1rem;
+}
+
+td {
+  border: solid white 1px;
+}
+
+#sortable {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  background: none;
+  height: 2rem;
+}

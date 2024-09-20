@@ -1,0 +1,15 @@
+#Button {
+  padding: 2px;
+  border: solid white 1px;
+  border-radius: 8px;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  font-weight: bold;
+}
+
+#Button:hover {
+  cursor: pointer;
+}
