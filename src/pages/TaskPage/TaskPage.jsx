@@ -78,14 +78,37 @@ const TaskPage = () => {
       input.cpv != "" &&
       input.skaits != ""
     ) {
-      let temp = input;
-      temp.id = wannabeinitstate[wannabeinitstate.length - 1].id + 1;
-      setinput({
-        ...input,
-        id: wannabeinitstate[wannabeinitstate.length - 1].id + 1,
-      });
-      setdb([...db, input]);
-      setwannabeinitstate([...db, input]);
+      if (db.length == 0) {
+        setdb([
+          {
+            id: 1,
+            nos: input.nos,
+            kat: input.kat,
+            cpv: input.cpv,
+            skaits: input.skaits,
+            selected: false,
+          },
+        ]);
+        setwannabeinitstate([
+          {
+            id: 1,
+            nos: input.nos,
+            kat: input.kat,
+            cpv: input.cpv,
+            skaits: input.skaits,
+            selected: false,
+          },
+        ]);
+      } else {
+        let temp = input;
+        temp.id = wannabeinitstate[wannabeinitstate.length - 1].id + 1;
+        setinput({
+          ...input,
+          id: wannabeinitstate[wannabeinitstate.length - 1].id + 1,
+        });
+        setdb([...db, input]);
+        setwannabeinitstate([...db, input]);
+      }
     }
   };
 
